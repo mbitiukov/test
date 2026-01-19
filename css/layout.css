@@ -1,0 +1,42 @@
+/* ================= NAVBAR ================= */
+.nav,
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+}
+
+.navbar {
+  background: #000;
+}
+
+.nav a,
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-family: "Ppneuebit";
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 60px;
+  background: #f5f5f5;
+  color: black;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+/* ================= NAV ACTIVE LINK ================= */
+.nav a.active {
+  color: #00f6ff;
+}
