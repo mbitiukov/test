@@ -26,15 +26,11 @@ if ("serviceWorker" in navigator) {
 //Back button
 document.addEventListener("DOMContentLoaded", () => {
   const backBtn = document.getElementById("pwa-back-btn");
-  if (location.pathname.endsWith("index.html")) {
-  backBtn.style.display = "none";
-}
-
-
   if (!backBtn) return;
 
   const isPWA =
     window.matchMedia("(display-mode: fullscreen)").matches ||
+    window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true;
 
   if (isPWA) {
@@ -49,3 +45,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
