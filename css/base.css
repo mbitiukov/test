@@ -1,0 +1,76 @@
+/* ================= FONTS ================= */
+@font-face {
+  font-family: "Ppneuebit";
+  src: url("../fonts/ppneuebit-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ppmonowest";
+  src: url("../fonts/ppmonowest-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= GLOBAL ================= */
+body {
+  background: white;
+  color: black;
+  font-family: sans-serif;
+}
+
+body.home {
+  overflow: hidden;
+}
+
+.pixel-font {
+  font-family: "Ppneuebit", Impact, sans-serif;
+}
+
+h1, h2 {
+  font-family: "Ppneuebit", Impact, sans-serif;
+}
+
+/* ================= Web app back button ================= */
+#pwa-back-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.5)
+              url("../icons/back.svg") no-repeat center;
+  background-size: 28px;
+
+  border: none;
+  outline: none;
+
+  z-index: 9999;
+
+  display: none;
+  backdrop-filter: blur(6px);
+
+  -webkit-tap-highlight-color: transparent;
+}
+#pwa-back-btn {
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* tap feedback */
+#pwa-back-btn:active {
+  transform: scale(0.92);
+}
+
+
