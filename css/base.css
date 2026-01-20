@@ -51,7 +51,7 @@ h1, h2 {
   border-radius: 50%;
 
   background: rgba(0, 0, 0, 0.5)
-              url("../icons/back.svg") no-repeat center;
+              url("../assets/icons/back.svg") no-repeat center;
   background-size: 28px;
 
   border: none;
