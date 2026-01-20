@@ -30,17 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const isPWA =
     window.matchMedia("(display-mode: fullscreen)").matches ||
-    window.matchMedia("(display-mode: standalone)").matches ||
-    window.navigator.standalone === true;
+    window.matchMedia("(display-mode: standalone)").matches;
 
-  if (isPWA) {
-    backBtn.style.display = "block";
-  }
+  if (isPWA) backBtn.style.display = "block";
 
   backBtn.addEventListener("click", () => {
-    if (history.length > 1) {
-      history.back();
-    } 
+    if (history.length > 1) history.back();
+    else window.location.href = "./index.html";
   });
 });
+
 

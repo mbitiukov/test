@@ -1,4 +1,4 @@
-const CACHE = "eyvi-v12";
+const CACHE = "eyvi-v13";
 
 const FILES = [
   "./",
