@@ -43,8 +43,8 @@ h1, h2 {
 /* ================= Web app back button ================= */
 #pwa-back-btn {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 10%;
+  bottom: 10%;
 
   width: 64px;
   height: 64px;
