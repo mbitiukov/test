@@ -74,3 +74,10 @@ h1, h2 {
 }
 
 
+#pwa-back-btn {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+
+
