@@ -23,20 +23,26 @@ if (openChoicesBtn && hero && choices) {
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./sw.js");
 }
-//Back button
 document.addEventListener("DOMContentLoaded", () => {
   const backBtn = document.getElementById("pwa-back-btn");
   if (!backBtn) return;
 
   const isPWA =
     window.matchMedia("(display-mode: fullscreen)").matches ||
-    window.matchMedia("(display-mode: standalone)").matches;
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true;
 
-  if (isPWA) backBtn.style.display = "block";
+  if (!isPWA) return;
+
+  // ✅ ONLY PWA REACHES HERE
+  backBtn.style.display = "block";
 
   backBtn.addEventListener("click", () => {
-    if (history.length > 1) history.back();
-    else window.location.href = "./index.html";
+    if (history.length > 1) {
+      history.back();
+    } else {
+      window.location.href = "./index.html";
+    }
   });
 });
 
