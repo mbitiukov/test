@@ -1,4 +1,4 @@
-const CACHE = "katalog-v1";
+const CACHE = "katalog-v2";
 
 const FILES = [
   "./",
